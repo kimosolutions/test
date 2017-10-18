@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(http://www.solofondosdepantalla.net/fondos-de-pantalla/Abstractos/Fondo-de-pantalla-Abstracto-229.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.entrada {
+  display: block;
+  margin-left: 5%;
+}
+
+.label {
+  display: block;
+  margin-left: 5%;
+  margin-top: 2%;
+  padding: .5%;
+}
