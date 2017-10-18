@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <center><h1>Calculadora de precios para Campamentos</h1></center>
-      <form class="form-group" action="" method="">
+      <form class="form-group" action="" method="post">
         <div class="col-md-6">
           <label for="" class="label">Lugar</label>
           <input type="text" name="lugar" value="" class="entrada form-control">
