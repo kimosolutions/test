@@ -83,15 +83,15 @@
           </div>
           <div class="col-md-2">
             <label for="min">¿Min. ganancias?</label>
-            <input type="number" name="min" value="" class="entrada form-control" placeholder="Default $10,000">
+            <input type="number" name="min" value="10000" class="entrada form-control" placeholder="Default $10,000">
           </div>
           <div class="col-md-2">
             <label for="max">¿Max. ganancias?</label>
-            <input type="number" name="max" value="" class="entrada form-control" placeholder="Default $15,000">
+            <input type="number" name="max" value="15000" class="entrada form-control" placeholder="Default $15,000">
           </div>
           <div class="col-md-2">
             <label for="escala">¿Diferencia precios?</label>
-            <input type="number" name="escala" value="" class="entrada form-control" placeholder="Default $50">
+            <input type="number" name="escala" value="50" class="entrada form-control" placeholder="Default $50">
           </div>
         </div>
         <div class="col-md-12">
