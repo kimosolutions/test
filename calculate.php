@@ -58,14 +58,23 @@
       if (isset($_POST['cobro']))
         $cobro = $_POST['cobro'];
 
-      if (isset($_POST['min']))
+      if (isset($_POST['min']) && $_POST['min'] != ""){
         $min = $_POST['min'];
+      } else {
+        $min = 10000;
+      }
 
-      if (isset($_POST['max']))
+      if (isset($_POST['max']) && $_POST['max'] != ""){
         $max = $_POST['max'];
+      } else {
+        $max = 15000;
+      }
 
-      if (isset($_POST['escala']))
+      if (isset($_POST['escala']) && $_POST['escala'] != ""){
         $escala = $_POST['escala'];
+      } else {
+        $escala = 50;
+      }
 
       //Imprime valor de cada variable
       // echo "Lugar = $".$lugar ."<br>";
