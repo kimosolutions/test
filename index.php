@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <center><h1>Calculadora de precios para Campamentos</h1></center>
-      <form class="form-group" action="" method="post">
+      <form class="form-group" action="calculate.php" method="post">
         <div class="col-md-6">
           <label for="" class="label">Lugar</label>
           <input type="text" name="lugar" value="" class="entrada form-control">
@@ -67,7 +67,7 @@
           <input type="text" name="vanguardia" value="" class="entrada form-control">
         </div>
         <div class="col-md-12">
-          <center><input class="btn btn-primary" type="button" name="Calcular" value="Submit"></center>
+          <center><input class="btn btn-primary" type="submit" name="Calcular" value="Submit"></center>
         </div>
       </form>
     </div>

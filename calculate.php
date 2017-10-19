@@ -48,6 +48,19 @@
     if (isset($_POST['vanguardia']))
       $vanguardia = $_POST['vanguardia'];
 
+    echo "Lugar = $".$lugar ."<br>";
+    echo "Comida = $".$comida."<br>";
+    echo "Mudanza = $".$mudanza."<br>";
+    echo "Material Actividades = $".$material_actividade."<br>";
+    echo "Material General= $".$material_general."<br>";
+    echo "Seguros = $".$seguros ."<br>";
+    echo "Playeras = $".$playeras."<br>";
+    echo "Cocineras = $".$cocineras."<br>";
+    echo "Camiones = $".$camiones."<br>";
+    echo "Paramedico = $".$paramedico."<br>";
+    echo "Extras = $".$extras."<br>";
+    echo "Becas = $".$becas."<br>";
+    echo "Vanguardia".$vanguardia."<br>";
     ?>
 
   </body>
