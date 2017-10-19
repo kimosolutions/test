@@ -10,6 +10,11 @@
 
     <?php
 
+    // Valores por default
+    $escala = 50;
+    $min = 10000;
+    $max = 150000
+
     // Si existe parametro en POST agrega a variable
     if (isset($_POST['lugar']))
       $lugar = $_POST['lugar'];
@@ -49,20 +54,63 @@
 
     if (isset($_POST['vanguardia']))
       $vanguardia = $_POST['vanguardia'];
+
+    if (isset($_POST['gente']))
+      $gente = $_POST['gente'];
+
+    if (isset($_POST['cobro']))
+      $cobro = $_POST['cobro'];
+
+    if (isset($_POST['min']))
+      $min = $_POST['min'];
+
+    if (isset($_POST['max']))
+      $max = $_POST['max'];
+
+    if (isset($_POST['escala']))
+      $escala = $_POST['escala'];
+
     //Imprime valor de cada variable
-    echo "Lugar = $".$lugar ."<br>";
-    echo "Comida = $".$comida."<br>";
-    echo "Mudanza = $".$mudanza."<br>";
-    echo "Material Actividades = $".$material_actividade."<br>";
-    echo "Material General= $".$material_general."<br>";
-    echo "Seguros = $".$seguros ."<br>";
-    echo "Playeras = $".$playeras."<br>";
-    echo "Cocineras = $".$cocineras."<br>";
-    echo "Camiones = $".$camiones."<br>";
-    echo "Paramedico = $".$paramedico."<br>";
-    echo "Extras = $".$extras."<br>";
-    echo "Becas = $".$becas."<br>";
-    echo "Vanguardia".$vanguardia."<br>";
+    // echo "Lugar = $".$lugar ."<br>";
+    // echo "Comida = $".$comida."<br>";
+    // echo "Mudanza = $".$mudanza."<br>";
+    // echo "Material Actividades = $".$material_actividades."<br>";
+    // echo "Material General= $".$material_general."<br>";
+    // echo "Seguros = $".$seguros ."<br>";
+    // echo "Playeras = $".$playeras."<br>";
+    // echo "Cocineras = $".$cocineras."<br>";
+    // echo "Camiones = $".$camiones."<br>";
+    // echo "Paramedico = $".$paramedico."<br>";
+    // echo "Extras = $".$extras."<br>";
+    // echo "Becas = $".$becas."<br>";
+    // echo "Vanguardia = $".$vanguardia."<br>";
+
+    $suma = 0;
+
+    foreach ($_POST as $key => $value) {
+      // Solo sume el total de cotizacion
+      if($key == "gente" || $value == "cobro" || $value == "min" || $value == "max" || $value == "escala"|| $value == "calcular")
+        continue;
+      $suma += $value;
+    }
+
+    echo "<h4>Total: $".number_format($suma)."</h4><br>";
+
+    $cobro = 0;
+    $posibles = array();
+
+    for($i = 0;$i<200;$i++){
+      $actual = ($gente * $cobro) - $suma;
+      if($actual > $min && $actual < $max){
+        $posibles[$cobro] = $actual;
+      }
+      $cobro += $escala;
+    }
+
+    foreach ($posibles as $key => $value) {
+      echo "Cobro: $".number_format($key).", gano: $".number_format($value)."<br>";
+    }
+
     ?>
 
   </body>
