@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Calculate</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
 
@@ -47,7 +49,7 @@
 
     if (isset($_POST['vanguardia']))
       $vanguardia = $_POST['vanguardia'];
-
+    //Imprime valor de cada variable
     echo "Lugar = $".$lugar ."<br>";
     echo "Comida = $".$comida."<br>";
     echo "Mudanza = $".$mudanza."<br>";
