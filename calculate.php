@@ -73,11 +73,12 @@
       echo "<h1 class='text-center'>Total de costo del camp. $".number_format($suma)."</h1><br>";
       //obteniento total de costo
       $total = $lugar+$comida+$mudanza+$material_actividades+$material_general+$seguros+$playeras+$cocineras+$camiones+$paramedico+$extras+$becas+$vanguardia;
+      
       if($_POST['parametro'] == "gente"){
         //obteniendo ganancias a base de escala de cobro
         $posibles = array();
         for ($i=0; $i < 2000; $i+= $escala) {
-          $ganancia = ($cobro*$gente)-$total
+          $ganancia = ($cobro*$gente)-$total;
           if($ganancia>$min && $ganancia < $max){
             array_push($posibles,$i);
           }
@@ -86,10 +87,10 @@
           echo "<div class='col-md-3'><p>Cobro: $".number_format($value).", Gano: $".number_format(($cobro*$gente)-$total)."</p></div>";
 
       } else if ($_POST['parametro'] == "cobro") {
-        //obteniendo ganancia 
+        //obteniendo ganancia
         $posibles = array();
         for ($i=0; $i < 100 ; $i++) {
-          $ganancia = ()$cobro * $i)-$total;
+          $ganancia = ($cobro * $i)-$total;
           if($ganancia > $min && $ganancia<  $max){
             array_push($possibles, $i);
           }
