@@ -14,16 +14,20 @@
 
       // Si existe parametro en POST agrega a variable
       if (isset($_POST['lugar']))
-        $lugar = $_POST['lugar'];
+        $lugar = $_POST['lugar']
+        $suma = $_POST['lugar'];
 
       if (isset($_POST['comida']))
-        $comida = $_POST['comida'];
+        $comida = $_POST['comida']
+        $suma = $_POST['comida']+ $suma;
 
       if (isset($_POST['mudanza']))
-        $mudanza = $_POST['mudanza'];
+        $mudanza = $_POST['mudanza']
+        $suma = $_POST['mudanza']+$suma;
 
       if (isset($_POST['material_actividades']))
         $material_actividades = $_POST['material_actividades'];
+        $suma = $_POST['material_actividades']+$suma;
 
       if (isset($_POST['material_general']))
         $material_general = $_POST['material_general'];
@@ -70,7 +74,7 @@
         $escala = $_POST['escala'];
       }
 
-      echo "<h1 class='text-center'>Total de costo del camp. $".number_format($suma)."</h1><br>";
+      echo <h1 class='text-center'>Total de costo del camp $</h1>/$suma<br>;
 
       if($_POST['parametro'] == "gente"){
 
@@ -84,10 +88,10 @@
         $posibles = array();
 
         foreach ($posibles as $key => $value)
-          echo "<div class='col-md-3'><p>Gente: $".number_format(/* Gente */).", Gano: $".number_format(/* Ganancia */)."</p></div>";
+          echo <div class='col-md-3'><p>Gente: $.number_format(/* Gente */)., Gano: $.number_format(/* Ganancia */).</p></div>";
 
       } else
-        echo "<h2 class='text-center text-warning'>No se selecciono ninguna opcion para calular</h2>";
+        echo <h2 class='text-center text-warning'>No se selecciono ninguna opcion para calular</h2>;
 
       ?>
     </div>
