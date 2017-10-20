@@ -71,20 +71,31 @@
       }
 
       echo "<h1 class='text-center'>Total de costo del camp. $".number_format($suma)."</h1><br>";
-
+      //obteniento total de costo
+      $total = $lugar+$comida+$mudanza+$material_actividades+$material_general+$seguros+$playeras+$cocineras+$camiones+$paramedico+$extras+$becas+$vanguardia;
       if($_POST['parametro'] == "gente"){
-
+        //obteniendo ganancias a base de escala de cobro
         $posibles = array();
-
+        for ($i=0; $i < 2000; $i+= $escala) {
+          $ganancia = ($cobro*$gente)-$total
+          if($ganancia>$min && $ganancia < $max){
+            array_push($posibles,$i);
+          }
+        }
         foreach ($posibles as $key => $value)
-          echo "<div class='col-md-3'><p>Cobro: $".number_format(/* Cobro */).", Gano: $".number_format(/* Ganancia */)."</p></div>";
+          echo "<div class='col-md-3'><p>Cobro: $".number_format($value).", Gano: $".number_format(($cobro*$gente)-$total)."</p></div>";
 
       } else if ($_POST['parametro'] == "cobro") {
-
+        //obteniendo ganancia 
         $posibles = array();
-
+        for ($i=0; $i < 100 ; $i++) {
+          $ganancia = ()$cobro * $i)-$total;
+          if($ganancia > $min && $ganancia<  $max){
+            array_push($possibles, $i);
+          }
+        }
         foreach ($posibles as $key => $value)
-          echo "<div class='col-md-3'><p>Gente: $".number_format(/* Gente */).", Gano: $".number_format(/* Ganancia */)."</p></div>";
+          echo "<div class='col-md-3'><p>Gente: $".number_format($value).", Gano: $".number_format(($cobro*$i)-$total)."</p></div>";
 
       } else
         echo "<h2 class='text-center text-warning'>No se selecciono ninguna opcion para calular</h2>";
