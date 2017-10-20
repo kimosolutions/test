@@ -88,7 +88,7 @@
         $posibles = array();
 
         foreach ($posibles as $key => $value)
-          echo <div class='col-md-3'><p>Gente: $.number_format(/* Gente */)., Gano: $.number_format(/* Ganancia */).</p></div>";
+          echo <div class='col-md-3'><p>Gente: $.number_format(/* Gente */)., Gano: $.number_format(/* Ganancia */).</p></div>;
 
       } else
         echo <h2 class='text-center text-warning'>No se selecciono ninguna opcion para calular</h2>;
