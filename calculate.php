@@ -100,44 +100,49 @@
         $suma += $value;
       }
 
-      echo "<h4 class='text-center'>Total de costo del camp. $".number_format($suma)."</h4><br>";
+      // Imprime Total
+      echo "<h1 class='text-center'>Total de costo del camp. $".number_format($suma)."</h1><br>";
 
+      // Que esta pidiendo calcular
       if($_POST['parametro'] == "gente"){
 
         $cobro = 0;
         $posibles = array();
 
-        for($i = 0;$i<200;$i++){
+        // Cantidad de precios distintos
+        $tmp = 200;
+        for($i = 0;$i<$tmp;$i++){
           $actual = ($gente * $cobro) - $suma;
+          // El precio pasa los parametros?
           if($actual > $min && $actual < $max){
             $posibles[$cobro] = $actual;
           }
           $cobro += $escala;
         }
 
-        foreach ($posibles as $key => $value) {
-          echo "Cobro: $".number_format($key).", Gano: $".number_format($value)."<br>";
-        }
+        foreach ($posibles as $key => $value)
+          echo "<div class='col-md-3'><p>Cobro: $".number_format($key).", Gano: $".number_format($value)."</p></div>";
 
       } else if ($_POST['parametro'] == "cobro") {
 
         $gente = 0;
         $posibles = array();
 
-        for($i = 0;$i<2000;$i++){
+        // Maximo de gente
+        $tmp = 2000;
+        for($i = 0;$i<$tmp;$i++){
           $actual = ($i * $cobro) - $suma;
+          // El precio pasa los parametros?
           if($actual > $min && $actual < $max){
             $posibles[$i] = $actual;
           }
         }
 
-        foreach ($posibles as $key => $value) {
-          echo "Gente: ".number_format($key).", Gano: $".number_format($value)."<br>";
-        }
+        foreach ($posibles as $key => $value)
+          echo "<div class='col-md-3'><p>Gente: ".number_format($key).", Gano: $".number_format($value)."</p></div>";
 
-      } else {
-        echo "<h2>No se selecciono ninguna opcion para calular</h2>";
-      }
+      } else
+        echo "<h2 class='text-center text-warning'>No se selecciono ninguna opcion para calular</h2>";
 
       ?>
     </div>
