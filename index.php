@@ -13,84 +13,87 @@
       <form class="form-group" action="calculate.php" method="post">
         <div class="row">
           <h3 class="text-center">Cotizacion</h3>
-          <div class="">
+          <div class="form1 shadow">
+          <div class="inputs">
             <label for="" class="label">Lugar</label>
             <input type="number" name="lugar" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Comida</label>
             <input type="number" name="comida" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Mudanza</label>
             <input type="number" name="mudanza" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Material Actividades</label>
             <input type="number" name="material_actividades" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Material General</label>
             <input type="number" name="material_general" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Seguros</label>
             <input type="number" name="seguros" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Playeras</label>
             <input type="number" name="playeras" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Publicidad</label>
             <input type="number" name="" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Cocineras</label>
             <input type="number" name="cocineras" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Camiones</label>
             <input type="number" name="camiones" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Paramedico</label>
             <input type="number" name="paramedico" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Extras</label>
             <input type="number" name="extras" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Becas</label>
             <input type="number" name="becas" value="" class="entrada  ">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="" class="label">Vanguardia</label>
             <input type="number" name="vanguardia" value="" class="entrada  ">
           </div>
         </div>
+      </div>
         <div class="row">
           <h3 class="text-center">Parametros</h3>
-          <div class="">
+          <div class="form1 shadow">
+          <div class="inputs">
             <input type="radio" name="parametro" value="gente" id="radioG">
             <label for="gente">&nbsp;¿Cuanta gente esperas?</label>
             <input type="number" name="gente" value="" class="entrada" id="gente">
           </div>
-          <div class="">
+          <div class="inputs">
             <input type="radio" name="parametro" value="cobro" id="radioC">
             <label for="cobro">&nbsp;¿Cuanto quieres cobrar?</label>
             <input type="number" name="cobro" value="" class="entrada" id="cobro">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="min">¿Min. ganancias?</label>
             <input type="number" name="min" value="" class="entrada" placeholder="">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="max">¿Max. ganancias?</label>
             <input type="number" name="max" value="" class="entrada" placeholder="">
           </div>
-          <div class="">
+          <div class="inputs">
             <label for="escala">¿Diferencia precios?</label>
             <input type="number" name="escala" value="" class="entrada" placeholder="">
           </div>
@@ -102,6 +105,7 @@
           </center>
         </div>
       </form>
+    </div>
     </div>
 
     <script>

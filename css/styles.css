@@ -15,7 +15,29 @@ body {
   margin-left: 5%;
 }*/
 
+
 .label {
   color:black;
   font-size:14px ;
+  display: inline-block;
+  margin: auto;
+}
+
+.form1
+{
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+}
+
+.inputs
+{
+  display: inline-block;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+.shadow
+{
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
