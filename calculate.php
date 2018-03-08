@@ -11,7 +11,7 @@
     <div class="container">
 
       <?php
-
+      $suma = 0;
       // Si existe parametro en POST agrega a variable
       if (isset($_POST['lugar']))
         $lugar = $_POST['lugar'];
@@ -54,7 +54,7 @@
 
       if (isset($_POST['gente']))
         $gente = $_POST['gente'];
-
+        $suma = $lugar*15000/$gente + $comida*13000/$gente + $mudanza*8000/$gente + $material_actividades*2000/$gente + $material_general*3200/$gente
       if (isset($_POST['cobro']))
         $cobro = $_POST['cobro'];
 
@@ -69,6 +69,7 @@
       if (isset($_POST['escala']) && $_POST['escala'] != ""){
         $escala = $_POST['escala'];
       }
+
 
       echo "<h1 class='text-center'>Total de costo del camp. $".number_format($suma)."</h1><br>";
 
